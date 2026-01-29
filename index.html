@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Seatwork 2</title>
+<style>
+    body{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-image: url('https://i.pinimg.com/1200x/f1/76/50/f17650bc56cf2e5791fb4e4b19cb52a2.jpg');
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .container1{
+        background-color: #ffffff;
+        margin: 150px auto;
+        padding: 10px;
+        max-width: 300px;
+        margin-top: 200px;
+        box-shadow: #e7f4ff 0px 0px 10px 5px;
+    }
+    h1 {
+        color: #000000;
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 20px; 
+    }
+    label {
+        color: #000000;
+        font-size: 20px;
+        display: boxed;
+    }
+    input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        margin-right: 8px;
+        cursor: pointer;
+        accent-color: #e2f0fd;
+    }
+    select {
+        padding: 5px 10px;
+        border: 1px  rgb(255, 255, 255);
+        background-color: #fff;
+        color: #000000;
+        font-size: 14px;
+        margin-left: 50px;
+    }
+    button {
+        background-image: url('https://i.pinimg.com/1200x/b2/da/d3/b2dad3cec59129800ae36f0f5020082c.jpg');
+        background-position: center;
+        background-size: cover;
+        color: rgb(0, 0, 0);
+        padding: 12px 30px;
+        border: 1px  rgb(255, 255, 255);
+        margin: 8px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    #result {
+        margin-top: 20px;
+        font-size: 18px;
+        color: rgb(0, 0, 0);
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+</style>
+</head>
+<body>
+    <center> <div class="container1">
+        <h4>team checker</h4>
+        <form id="teamForm">
+            <label>
+                <input type="checkbox" id="registered"> are you done with the online registration?
+            </label>
+        <br><br>
+            <label>
+                <input type="checkbox" id="medicalCert"> do you have a medical clearance from the clinic?
+            </label>
+        <br><br>
+            <label>select your section:
+                <select id="selectTeam">
+                    <option value="">sections</option>
+                    <option value="Team A">emerald</option>
+                    <option value="Team B">topaz</option>
+                    <option value="Team C">ruby</option>
+                    <option value="Team D">sapphire</option>
+                </select>
+            </label>
+        <br><br> 
+            <button type="button" onclick="checkTeamStatus()">Check Status</button>
+            <button type="button" onclick="clearStatus()">Clear</button>
+        </form>
+        
+
+        
+        <div id="result"></div>
+        </center>
+    </div>
+    
+    <script type="py" src="main.py"></script>
+</body>
